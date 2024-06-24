@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            color: #333333;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 25px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555555;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .radio-label {
+            margin-right: 20px;
+            color: #555555;
+        }
+
+        h3 {
+            color: #333333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #e41e1e;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="your-server-endpoint" method="post">
+        <h1>Create Your CV</h1>
+
+        <label for="name">First Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your first name" required>
+
+        <label for="cast">Last Name</label>
+        <input type="text" name="cast" id="cast" placeholder="Enter your last name" required>
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" placeholder="Your age" required>
+
+        <h3>Gender</h3>
+        <div>
+            <input type="radio" name="gender" id="male" value="male" required>
+            <label for="male" class="radio-label">Male</label>
+
+            <input type="radio" name="gender" id="female" value="female" required>
+            <label for="female" class="radio-label">Female</label>
+        </div>
+
+        <label for="birth">Date of Birth</label>
+        <input type="date" name="birth" id="birth" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+        <label for="addr">Address</label>
+        <input type="text" name="addr" id="addr" placeholder="Enter your full address" required>
+
+        <label for="father">Father's Name</label>
+        <input type="text" name="father" id="father" placeholder="Enter your father's name" required>
+
+        <label for="mother">Mother's Name</label>
+        <input type="text" name="mother" id="mother" placeholder="Enter your mother's name" required>
+
+        <label for="place">Location</label>
+        <select name="place" id="place" required>
+            <option value="" disabled selected>Select your location</option>
+            <option value="Kathmandu">Kathmandu</option>
+            <option value="Lalitpur">Lalitpur</option>
+            <option value="Dhangadhi">Dhangadhi</option>
+        </select>
+
+        <label for="text">About Yourself</label>
+        <textarea name="text" id="text" cols="30" rows="4" placeholder="Describe yourself" required></textarea>
+
+        <div class="button-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+
+</html>
